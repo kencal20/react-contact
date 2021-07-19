@@ -11,17 +11,14 @@ class Form extends Component {
     this.handleChange = (e) => {
       this.setState = { [e.target.name]: e.target.value };
     };
-    this.handleSubmit =(e)=>{
-        this.props.adduser(this.state)
-    
-  this.setstate({  name: "",
-  email: "",
-  gender: "",})
-}
-this.handleChange = (e) => {
-    this.setState = { [e.target.name]: e.target.value };
-  }
+    this.handleSubmit = (e) => {
+      this.props.adduser(this.state);
 
+      this.setstate({ name: "", email: "", gender: "" });
+    };
+    this.handleChange = (e) => {
+      this.setState = { [e.target.name]: e.target.value };
+    };
   }
   render() {
     return (
@@ -60,6 +57,5 @@ this.handleChange = (e) => {
     );
   }
 }
-
 
 export default Form;
